@@ -13,8 +13,8 @@ function Layout({ children }) {
             {/* Logo + Name */}
             <Link to="/" className="flex items-center gap-4 md:gap-6">
               <div className="relative inline-block">
-                <img 
-                  src="/logo/cosscack.PNG" 
+              <img 
+                  src="/cossack_auto/logo/cosscack.PNG"
                   alt="Cossack Auto Logo" 
                   className="w-12 h-12 md:w-16 md:h-16 flex-shrink-0"
                   style={{ 
@@ -97,7 +97,7 @@ function Layout({ children }) {
             </div>
             <div className="flex-shrink-0 opacity-60">
               <img 
-                src="/logo/cossack_stamp.PNG" 
+                src="/cossack_auto/logo/cossack_stamp.PNG" 
                 alt="Cossack Auto Stamp" 
                 className="w-16 h-16 md:w-20 md:h-20"
               />

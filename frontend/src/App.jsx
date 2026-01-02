@@ -11,7 +11,7 @@ import Reservation from './Reservation'
 function App() {
   return (
     <ErrorBoundary>
-      <Router>
+      <Router basename="/cossack_auto">
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
