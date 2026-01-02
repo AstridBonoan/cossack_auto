@@ -20,13 +20,13 @@ function Home() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
               to="/reservation"
-              className="bg-cossack-red hover:bg-cossack-red/90 text-off-white font-heading font-bold py-5 px-10 md:py-6 md:px-12 uppercase tracking-wider text-lg md:text-xl transition-colors min-w-[200px]"
+              className="bg-cossack-red hover:bg-cossack-red/90 active:bg-cossack-red/95 text-off-white font-heading font-bold py-5 px-10 md:py-6 md:px-12 uppercase tracking-wider text-lg md:text-xl transition-all duration-200 min-w-[200px] shadow-lg hover:shadow-xl"
             >
               Book Now
             </Link>
             <Link
               to="/services"
-              className="bg-charcoal hover:bg-charcoal/90 text-off-white font-heading font-bold py-5 px-10 md:py-6 md:px-12 uppercase tracking-wider text-lg md:text-xl transition-colors border-2 border-charcoal min-w-[200px]"
+              className="bg-charcoal hover:bg-charcoal/90 active:bg-charcoal/95 text-off-white font-heading font-bold py-5 px-10 md:py-6 md:px-12 uppercase tracking-wider text-lg md:text-xl transition-all duration-200 border-2 border-charcoal min-w-[200px] shadow-lg hover:shadow-xl"
             >
               Our Services
             </Link>

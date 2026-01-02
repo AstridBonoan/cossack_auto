@@ -37,6 +37,17 @@
     letter-spacing: -0.03em;
     font-weight: 800;
   }
+  
+  /* Professional button styling */
+  a, button {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Better focus states for accessibility */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #8E0F1B;
+    outline-offset: 2px;
+  }
 }
 
 @layer utilities {

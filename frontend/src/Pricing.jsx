@@ -93,7 +93,7 @@ function Pricing() {
               </ul>
               <Link
                 to="/reservation"
-                className="block w-full bg-charcoal hover:bg-charcoal/90 text-off-white font-heading font-bold py-5 px-8 uppercase tracking-wider text-lg md:text-xl transition-colors text-center border-2 border-charcoal"
+                className="block w-full bg-charcoal hover:bg-charcoal/90 active:bg-charcoal/95 text-off-white font-heading font-bold py-5 px-8 uppercase tracking-wider text-lg md:text-xl transition-all duration-200 text-center border-2 border-charcoal shadow-lg hover:shadow-xl"
               >
                 Book Service
               </Link>
@@ -132,7 +132,7 @@ function Pricing() {
             </p>
             <Link
               to="/reservation"
-              className="inline-block bg-cossack-red hover:bg-cossack-red/90 text-off-white font-heading font-bold py-5 px-10 md:py-6 md:px-12 uppercase tracking-wider text-lg md:text-xl transition-colors"
+              className="inline-block bg-cossack-red hover:bg-cossack-red/90 active:bg-cossack-red/95 text-off-white font-heading font-bold py-5 px-10 md:py-6 md:px-12 uppercase tracking-wider text-lg md:text-xl transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Get a Quote
             </Link>
