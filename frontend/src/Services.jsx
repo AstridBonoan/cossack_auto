@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { servicesData } from './servicesData'
 
 function Services() {
   const [services, setServices] = useState([])
@@ -7,22 +8,28 @@ function Services() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    // Try to fetch from API, fallback to static data
     fetchServices()
   }, [])
 
   const fetchServices = async () => {
     try {
       setLoading(true)
+      // Try API first
       const response = await fetch('/api/services')
-      if (!response.ok) {
-        throw new Error('Failed to fetch services')
+      if (response.ok) {
+        const data = await response.json()
+        setServices(data.services || [])
+        setError(null)
+      } else {
+        // Fallback to static data
+        setServices(servicesData)
+        setError(null)
       }
-      const data = await response.json()
-      setServices(data.services || [])
-      setError(null)
     } catch (err) {
-      setError(err.message)
-      console.error('Error fetching services:', err)
+      // If API fails, use static data (for GitHub Pages)
+      setServices(servicesData)
+      setError(null)
     } finally {
       setLoading(false)
     }

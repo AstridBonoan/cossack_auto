@@ -61,15 +61,23 @@ function Reservation() {
         submitData.append('picture', formData.picture)
       }
 
-      const response = await fetch('/api/reservations', {
-        method: 'POST',
-        body: submitData
-      })
+      // Try to submit to API, but for GitHub Pages demo, just show success
+      try {
+        const response = await fetch('/api/reservations', {
+          method: 'POST',
+          body: submitData
+        })
 
-      if (!response.ok) {
-        throw new Error('Failed to submit reservation')
+        if (response.ok) {
+          setSubmitted(true)
+          return
+        }
+      } catch (apiError) {
+        // If API is not available (GitHub Pages), show success anyway for demo
+        console.log('API not available, showing demo success message')
       }
 
+      // For GitHub Pages demo - show success without backend
       setSubmitted(true)
       setFormData({
         year: '',
