@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import ErrorBoundary from './ErrorBoundary'
 import Layout from './Layout'
 import Home from './Home'
@@ -11,7 +11,7 @@ import Reservation from './Reservation'
 function App() {
   return (
     <ErrorBoundary>
-      <Router basename="/cossack_auto">
+      <Router>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
