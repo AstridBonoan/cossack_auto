@@ -7,16 +7,16 @@ function Layout({ children }) {
 
   return (
     <div className="min-h-screen bg-off-white">
-      <header className="bg-charcoal text-off-white border-b border-border-gray texture-charcoal">
-        <div className="container mx-auto px-6 md:px-8">
-          <div className="flex items-center justify-between py-4 md:py-6">
+      <header className="bg-charcoal text-off-white border-b-2 border-border-gray texture-charcoal">
+        <div className="container mx-auto px-6 md:px-12 lg:px-16">
+          <div className="flex items-center justify-between py-5 md:py-7 lg:py-8">
             {/* Logo + Name */}
-            <Link to="/" className="flex items-center gap-4 md:gap-6">
+            <Link to="/" className="flex items-center gap-5 md:gap-6 lg:gap-8">
               <div className="relative inline-block">
               <img 
                   src="/cossack_auto/logo/cosscack.PNG"
                   alt="Cossack Auto Logo" 
-                  className="w-12 h-12 md:w-16 md:h-16 flex-shrink-0"
+                  className="w-14 h-14 md:w-18 md:h-18 lg:w-20 lg:h-20 flex-shrink-0"
                   style={{ 
                     filter: 'brightness(1.2) contrast(1.3)',
                     mixBlendMode: 'normal'
@@ -24,18 +24,18 @@ function Layout({ children }) {
                 />
               </div>
               <div>
-                <h1 className="text-xl md:text-2xl font-heading font-bold tracking-tight">COSSACK AUTO</h1>
+                <h1 className="text-xl md:text-2xl lg:text-3xl font-heading font-bold tracking-tight">COSSACK AUTO</h1>
               </div>
             </Link>
 
             {/* Navigation - Desktop */}
-            <nav className="hidden md:flex items-center gap-8">
-              <Link to="/" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">Home</Link>
-              <Link to="/about" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">About</Link>
-              <Link to="/services" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">Services</Link>
-              <Link to="/pricing" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">Pricing</Link>
-              <Link to="/reviews" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">Reviews</Link>
-              <Link to="/reservation" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">Book</Link>
+            <nav className="hidden md:flex items-center gap-10 lg:gap-12">
+              <Link to="/" className="text-off-white hover:text-off-white/80 font-body text-sm md:text-base uppercase tracking-wider transition-colors font-medium">Home</Link>
+              <Link to="/about" className="text-off-white hover:text-off-white/80 font-body text-sm md:text-base uppercase tracking-wider transition-colors font-medium">About</Link>
+              <Link to="/services" className="text-off-white hover:text-off-white/80 font-body text-sm md:text-base uppercase tracking-wider transition-colors font-medium">Services</Link>
+              <Link to="/pricing" className="text-off-white hover:text-off-white/80 font-body text-sm md:text-base uppercase tracking-wider transition-colors font-medium">Pricing</Link>
+              <Link to="/reviews" className="text-off-white hover:text-off-white/80 font-body text-sm md:text-base uppercase tracking-wider transition-colors font-medium">Reviews</Link>
+              <Link to="/reservation" className="text-off-white hover:text-off-white/80 font-body text-sm md:text-base uppercase tracking-wider transition-colors font-medium">Book</Link>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -56,7 +56,7 @@ function Layout({ children }) {
             {/* CTA Button - Desktop */}
             <Link 
               to="/reservation"
-              className="hidden md:block bg-cossack-red hover:bg-cossack-red/90 text-off-white font-heading font-bold py-2 px-4 md:py-3 md:px-6 uppercase tracking-wide text-sm transition-colors"
+              className="hidden md:block bg-cossack-red hover:bg-cossack-red/90 text-off-white font-heading font-bold py-3 px-6 lg:py-4 lg:px-8 uppercase tracking-wider text-sm md:text-base transition-colors"
             >
               Book Now
             </Link>
@@ -87,11 +87,11 @@ function Layout({ children }) {
 
       {children}
 
-      <footer className="bg-charcoal text-off-white mt-16 md:mt-20 border-t border-border-gray texture-charcoal">
-        <div className="container mx-auto px-6 md:px-8 py-6 md:py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      <footer className="bg-charcoal text-off-white mt-20 md:mt-28 lg:mt-32 border-t-2 border-border-gray texture-charcoal">
+        <div className="container mx-auto px-6 md:px-12 lg:px-16 py-10 md:py-12 lg:py-14">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
-              <p className="text-xs text-muted-gray uppercase tracking-wide font-body">
+              <p className="text-sm md:text-base text-muted-gray uppercase tracking-wider font-body font-medium">
                 &copy; 2024 Cossack Auto
               </p>
             </div>
@@ -99,7 +99,7 @@ function Layout({ children }) {
               <img 
                 src="/cossack_auto/logo/cossack_stamp.PNG" 
                 alt="Cossack Auto Stamp" 
-                className="w-16 h-16 md:w-20 md:h-20"
+                className="w-20 h-20 md:w-24 md:h-24"
               />
             </div>
           </div>
