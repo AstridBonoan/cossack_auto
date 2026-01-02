@@ -8,15 +8,15 @@ function Layout({ children }) {
   return (
     <div className="min-h-screen bg-off-white">
       <header className="bg-charcoal text-off-white border-b border-border-gray texture-charcoal">
-        <div className="container mx-auto px-6 md:px-8 lg:px-12">
-          <div className="flex items-center justify-between py-4 md:py-5 lg:py-6">
+        <div className="container mx-auto px-6 md:px-8">
+          <div className="flex items-center justify-between py-3 md:py-3.5">
             {/* Logo + Name */}
-            <Link to="/" className="flex items-center gap-4 md:gap-5">
+            <Link to="/" className="flex items-center gap-3 md:gap-4">
               <div className="relative inline-block">
               <img 
                   src="/cossack_auto/logo/cosscack.PNG"
                   alt="Cossack Auto Logo" 
-                  className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 flex-shrink-0"
+                  className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0"
                   style={{ 
                     filter: 'brightness(1.2) contrast(1.3)',
                     mixBlendMode: 'normal'
@@ -24,18 +24,18 @@ function Layout({ children }) {
                 />
               </div>
               <div>
-                <h1 className="text-lg md:text-xl lg:text-2xl font-heading font-bold tracking-tight">COSSACK AUTO</h1>
+                <h1 className="text-base md:text-lg font-heading font-bold tracking-tight">COSSACK AUTO</h1>
               </div>
             </Link>
 
             {/* Navigation - Desktop */}
-            <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-              <Link to="/" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">Home</Link>
-              <Link to="/about" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">About</Link>
-              <Link to="/services" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">Services</Link>
-              <Link to="/pricing" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">Pricing</Link>
-              <Link to="/reviews" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">Reviews</Link>
-              <Link to="/reservation" className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors">Book</Link>
+            <nav className="hidden md:flex items-center gap-5 lg:gap-6">
+              <Link to="/" className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors">Home</Link>
+              <Link to="/about" className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors">About</Link>
+              <Link to="/services" className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors">Services</Link>
+              <Link to="/pricing" className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors">Pricing</Link>
+              <Link to="/reviews" className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors">Reviews</Link>
+              <Link to="/reservation" className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors">Book</Link>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -44,7 +44,7 @@ function Layout({ children }) {
               className="md:hidden text-off-white p-2"
               aria-label="Toggle menu"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {mobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -56,7 +56,7 @@ function Layout({ children }) {
             {/* CTA Button - Desktop */}
             <Link 
               to="/reservation"
-              className="hidden md:block bg-cossack-red hover:bg-cossack-red/90 text-off-white font-heading font-bold py-2 px-4 md:py-2.5 md:px-6 uppercase tracking-wide text-sm transition-colors"
+              className="hidden md:block bg-cossack-red hover:bg-cossack-red/90 text-off-white font-heading font-bold py-1.5 px-4 uppercase tracking-wide text-xs transition-colors"
             >
               Book Now
             </Link>
@@ -64,18 +64,18 @@ function Layout({ children }) {
 
           {/* Mobile Navigation Menu */}
           {mobileMenuOpen && (
-            <nav className="md:hidden border-t border-border-gray py-4">
-              <div className="flex flex-col gap-4">
-                <Link to="/" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors py-2">Home</Link>
-                <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors py-2">About</Link>
-                <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors py-2">Services</Link>
-                <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors py-2">Pricing</Link>
-                <Link to="/reviews" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors py-2">Reviews</Link>
-                <Link to="/reservation" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-sm uppercase tracking-wide transition-colors py-2">Book</Link>
+            <nav className="md:hidden border-t border-border-gray py-3">
+              <div className="flex flex-col gap-3">
+                <Link to="/" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors py-1.5">Home</Link>
+                <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors py-1.5">About</Link>
+                <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors py-1.5">Services</Link>
+                <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors py-1.5">Pricing</Link>
+                <Link to="/reviews" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors py-1.5">Reviews</Link>
+                <Link to="/reservation" onClick={() => setMobileMenuOpen(false)} className="text-off-white hover:text-off-white/80 font-body text-xs uppercase tracking-wide transition-colors py-1.5">Book</Link>
                 <Link 
                   to="/reservation"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="bg-cossack-red hover:bg-cossack-red/90 text-off-white font-heading font-bold py-3 px-6 uppercase tracking-wide text-sm transition-colors mt-2 text-center"
+                  className="bg-cossack-red hover:bg-cossack-red/90 text-off-white font-heading font-bold py-2 px-6 uppercase tracking-wide text-xs transition-colors mt-2 text-center"
                 >
                   Book Now
                 </Link>
@@ -88,10 +88,10 @@ function Layout({ children }) {
       {children}
 
       <footer className="bg-charcoal text-off-white mt-16 md:mt-20 border-t border-border-gray texture-charcoal">
-        <div className="container mx-auto px-6 md:px-8 lg:px-12 py-8 md:py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="container mx-auto px-6 md:px-8 py-5 md:py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="text-center md:text-left">
-              <p className="text-xs md:text-sm text-muted-gray uppercase tracking-wide font-body">
+              <p className="text-xs text-muted-gray uppercase tracking-wide font-body">
                 &copy; 2024 Cossack Auto
               </p>
             </div>
@@ -99,7 +99,7 @@ function Layout({ children }) {
               <img 
                 src="/cossack_auto/logo/cossack_stamp.PNG" 
                 alt="Cossack Auto Stamp" 
-                className="w-16 h-16 md:w-20 md:h-20"
+                className="w-12 h-12 md:w-14 md:h-14"
               />
             </div>
           </div>
@@ -112,19 +112,19 @@ function Layout({ children }) {
           <div className="grid grid-cols-3 divide-x divide-border-gray">
             <a 
               href="tel:" 
-              className="py-4 text-center font-heading font-bold text-sm uppercase tracking-wide hover:bg-charcoal/80 transition-colors"
+              className="py-3 text-center font-heading font-bold text-xs uppercase tracking-wide hover:bg-charcoal/80 transition-colors"
             >
               Call
             </a>
             <a 
               href="sms:" 
-              className="py-4 text-center font-heading font-bold text-sm uppercase tracking-wide hover:bg-charcoal/80 transition-colors"
+              className="py-3 text-center font-heading font-bold text-xs uppercase tracking-wide hover:bg-charcoal/80 transition-colors"
             >
               Text
             </a>
             <Link 
               to="/reservation"
-              className="py-4 text-center font-heading font-bold text-sm uppercase tracking-wide bg-cossack-red hover:bg-cossack-red/90 transition-colors"
+              className="py-3 text-center font-heading font-bold text-xs uppercase tracking-wide bg-cossack-red hover:bg-cossack-red/90 transition-colors"
             >
               Book
             </Link>
@@ -134,7 +134,7 @@ function Layout({ children }) {
 
       {/* Spacer for mobile sticky bar */}
       {location.pathname !== '/reservation' && (
-        <div className="h-16 md:hidden"></div>
+        <div className="h-14 md:hidden"></div>
       )}
     </div>
   )
