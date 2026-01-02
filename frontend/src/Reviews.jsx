@@ -59,40 +59,40 @@ function Reviews() {
   return (
     <>
       {/* Hero Section */}
-      <section className="container mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-32">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-charcoal mb-6 tracking-tight">Customer Reviews</h1>
-          <div className="h-1.5 w-32 bg-cossack-red mx-auto mb-8"></div>
-          <p className="text-muted-gray text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto font-body font-medium">
+      <section className="container mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-charcoal mb-4 tracking-tight">Customer Reviews</h1>
+          <div className="h-1 w-24 bg-cossack-red mx-auto mb-6"></div>
+          <p className="text-muted-gray text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-body">
             See what our customers have to say about their experience at Cossack Auto.
           </p>
         </div>
       </section>
 
       {/* Reviews Grid */}
-      <section className="container mx-auto px-6 md:px-12 lg:px-16 pb-20 md:pb-28 lg:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-14">
+      <section className="container mx-auto px-6 md:px-8 lg:px-12 pb-16 md:pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="bg-off-white border-2 border-border-gray p-10 md:p-12 hover:border-charcoal/40 transition-all duration-200"
+              className="bg-off-white border border-border-gray p-8 hover:border-charcoal/40 transition-colors"
             >
-              <div className="mb-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl md:text-2xl font-heading font-bold text-charcoal uppercase tracking-tight">
+              <div className="mb-4">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-lg font-heading font-bold text-charcoal uppercase tracking-tight">
                     {review.name}
                   </h3>
-                  <span className="text-cossack-red text-xl md:text-2xl font-heading">
+                  <span className="text-cossack-red text-lg font-heading">
                     {renderStars(review.rating)}
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-muted-gray font-body font-medium">
+                <div className="flex items-center gap-2 text-xs text-muted-gray font-body">
                   <span>{review.service}</span>
                   <span>•</span>
                   <span>{review.date}</span>
                 </div>
               </div>
-              <p className="text-muted-gray text-base md:text-lg leading-relaxed font-body">
+              <p className="text-muted-gray text-sm leading-relaxed font-body">
                 {review.review}
               </p>
             </div>
@@ -101,33 +101,33 @@ function Reviews() {
       </section>
 
       {/* Average Rating Section */}
-      <section className="container mx-auto px-6 md:px-12 lg:px-16 pb-20 md:pb-28 lg:pb-32">
-        <div className="max-w-4xl mx-auto bg-off-white border-2 border-border-gray p-12 md:p-14 lg:p-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-charcoal mb-6 tracking-tight">Overall Rating</h2>
-          <div className="h-1.5 w-32 bg-cossack-red mx-auto mb-10"></div>
-          <div className="mb-8">
-            <span className="text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-charcoal">5.0</span>
-            <div className="text-cossack-red text-4xl md:text-5xl font-heading mt-4">
+      <section className="container mx-auto px-6 md:px-8 lg:px-12 pb-16 md:pb-24">
+        <div className="max-w-3xl mx-auto bg-off-white border border-border-gray p-8 md:p-10 text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-4 tracking-tight">Overall Rating</h2>
+          <div className="h-1 w-24 bg-cossack-red mx-auto mb-6"></div>
+          <div className="mb-6">
+            <span className="text-5xl md:text-6xl font-heading font-bold text-charcoal">5.0</span>
+            <div className="text-cossack-red text-3xl font-heading mt-2">
               {renderStars(5)}
             </div>
           </div>
-          <p className="text-muted-gray text-base md:text-lg font-body font-medium">
+          <p className="text-muted-gray text-base font-body">
             Based on customer reviews
           </p>
         </div>
       </section>
 
       {/* Leave Review CTA */}
-      <section className="container mx-auto px-6 md:px-12 lg:px-16 pb-20 md:pb-28 lg:pb-32">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-charcoal mb-6 tracking-tight">Share Your Experience</h2>
-          <div className="h-1.5 w-32 bg-cossack-red mx-auto mb-8"></div>
-          <p className="text-muted-gray text-lg md:text-xl leading-relaxed font-body mb-10 font-medium">
+      <section className="container mx-auto px-6 md:px-8 lg:px-12 pb-16 md:pb-24">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-4 tracking-tight">Share Your Experience</h2>
+          <div className="h-1 w-24 bg-cossack-red mx-auto mb-6"></div>
+          <p className="text-muted-gray text-base leading-relaxed font-body mb-8">
             Had a great experience? We'd love to hear from you. Your feedback helps us serve you better.
           </p>
           <a
             href="tel:+1234567890"
-            className="inline-block bg-charcoal hover:bg-charcoal/90 active:bg-charcoal/95 text-off-white font-heading font-bold py-5 px-10 md:py-6 md:px-12 uppercase tracking-wider text-lg md:text-xl transition-all duration-200 border-2 border-charcoal shadow-lg hover:shadow-xl"
+            className="inline-block bg-charcoal hover:bg-charcoal/90 active:bg-charcoal/95 text-off-white font-heading font-bold py-4 px-8 uppercase tracking-wide text-lg transition-all duration-200 border-2 border-charcoal shadow-md hover:shadow-lg"
           >
             Contact Us
           </a>

@@ -54,46 +54,46 @@ function Pricing() {
   return (
     <>
       {/* Hero Section */}
-      <section className="container mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-32">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-charcoal mb-6 tracking-tight">Pricing</h1>
-          <div className="h-1.5 w-32 bg-cossack-red mx-auto mb-8"></div>
-          <p className="text-muted-gray text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto font-body font-medium">
+      <section className="container mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-charcoal mb-4 tracking-tight">Pricing</h1>
+          <div className="h-1 w-24 bg-cossack-red mx-auto mb-6"></div>
+          <p className="text-muted-gray text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-body">
             Transparent pricing. No surprises. Fair rates for quality work.
           </p>
         </div>
       </section>
 
       {/* Pricing Tiers */}
-      <section className="container mx-auto px-6 md:px-12 lg:px-16 pb-20 md:pb-28 lg:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-14 mb-20">
+      <section className="container mx-auto px-6 md:px-8 lg:px-12 pb-16 md:pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-16">
           {pricingTiers.map((tier, index) => (
             <div
               key={index}
-              className="bg-off-white border-2 border-border-gray p-10 md:p-12 lg:p-14 hover:border-charcoal/40 transition-colors"
+              className="bg-off-white border border-border-gray p-8 md:p-10 hover:border-charcoal/40 transition-colors"
             >
-              <h3 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-6 uppercase tracking-tight">
+              <h3 className="text-2xl md:text-3xl font-heading font-bold text-charcoal mb-4 uppercase tracking-tight">
                 {tier.name}
               </h3>
-              <div className="mb-8">
-                <span className="text-4xl md:text-5xl font-heading font-bold text-charcoal">
+              <div className="mb-6">
+                <span className="text-3xl md:text-4xl font-heading font-bold text-charcoal">
                   {tier.price}
                 </span>
               </div>
-              <p className="text-muted-gray mb-10 text-base md:text-lg leading-relaxed font-body">
+              <p className="text-muted-gray mb-8 text-base leading-relaxed font-body">
                 {tier.description}
               </p>
-              <ul className="space-y-4 mb-10">
+              <ul className="space-y-3 mb-8">
                 {tier.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
-                    <span className="text-muted-gray mr-4 font-body text-lg">•</span>
-                    <span className="text-muted-gray text-base font-body">{feature}</span>
+                    <span className="text-muted-gray mr-3 font-body">•</span>
+                    <span className="text-muted-gray text-sm font-body">{feature}</span>
                   </li>
                 ))}
               </ul>
               <Link
                 to="/reservation"
-                className="block w-full bg-charcoal hover:bg-charcoal/90 active:bg-charcoal/95 text-off-white font-heading font-bold py-5 px-8 uppercase tracking-wider text-lg md:text-xl transition-all duration-200 text-center border-2 border-charcoal shadow-lg hover:shadow-xl"
+                className="block w-full bg-charcoal hover:bg-charcoal/90 active:bg-charcoal/95 text-off-white font-heading font-bold py-4 px-6 uppercase tracking-wide text-base md:text-lg transition-all duration-200 text-center border-2 border-charcoal shadow-md hover:shadow-lg"
               >
                 Book Service
               </Link>
@@ -103,36 +103,36 @@ function Pricing() {
       </section>
 
       {/* Common Services Pricing */}
-      <section className="container mx-auto px-6 md:px-12 lg:px-16 pb-20 md:pb-28 lg:pb-32">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-charcoal mb-6 tracking-tight text-center">
+      <section className="container mx-auto px-6 md:px-8 lg:px-12 pb-16 md:pb-24">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-4 tracking-tight text-center">
             Common Services
           </h2>
-          <div className="h-1.5 w-32 bg-cossack-red mx-auto mb-16"></div>
-          <div className="bg-off-white border-2 border-border-gray">
-            <div className="divide-y-2 divide-border-gray">
+          <div className="h-1 w-24 bg-cossack-red mx-auto mb-12"></div>
+          <div className="bg-off-white border border-border-gray">
+            <div className="divide-y divide-border-gray">
               {commonServices.map((item, index) => (
                 <div
                   key={index}
-                  className="flex justify-between items-center py-8 px-8 md:px-12 hover:bg-off-white/50 transition-colors"
+                  className="flex justify-between items-center py-6 px-6 md:px-8 hover:bg-off-white/50 transition-colors"
                 >
-                  <span className="text-charcoal font-body text-lg md:text-xl font-medium">
+                  <span className="text-charcoal font-body text-base md:text-lg">
                     {item.service}
                   </span>
-                  <span className="text-charcoal font-heading font-bold text-xl md:text-2xl">
+                  <span className="text-charcoal font-heading font-bold text-lg md:text-xl">
                     {item.price}
                   </span>
                 </div>
               ))}
             </div>
           </div>
-          <div className="mt-12 text-center">
-            <p className="text-muted-gray text-base font-body mb-8 font-medium">
+          <div className="mt-8 text-center">
+            <p className="text-muted-gray text-sm font-body mb-6">
               * Prices may vary based on vehicle make, model, and specific requirements.
             </p>
             <Link
               to="/reservation"
-              className="inline-block bg-cossack-red hover:bg-cossack-red/90 active:bg-cossack-red/95 text-off-white font-heading font-bold py-5 px-10 md:py-6 md:px-12 uppercase tracking-wider text-lg md:text-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-block bg-cossack-red hover:bg-cossack-red/90 active:bg-cossack-red/95 text-off-white font-heading font-bold py-4 px-8 uppercase tracking-wide text-lg transition-all duration-200 shadow-md hover:shadow-lg"
             >
               Get a Quote
             </Link>
@@ -141,15 +141,15 @@ function Pricing() {
       </section>
 
       {/* Note Section */}
-      <section className="container mx-auto px-6 md:px-12 lg:px-16 pb-20 md:pb-28 lg:pb-32">
-        <div className="max-w-4xl mx-auto bg-off-white border-2 border-border-gray p-12 md:p-14 lg:p-16">
-          <h3 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-6 uppercase tracking-tight">
+      <section className="container mx-auto px-6 md:px-8 lg:px-12 pb-16 md:pb-24">
+        <div className="max-w-3xl mx-auto bg-off-white border border-border-gray p-8 md:p-10">
+          <h3 className="text-2xl md:text-3xl font-heading font-bold text-charcoal mb-4 uppercase tracking-tight">
             Transparent Pricing
           </h3>
-          <p className="text-muted-gray text-base md:text-lg leading-relaxed font-body mb-6">
+          <p className="text-muted-gray text-base leading-relaxed font-body mb-4">
             We believe in honest, upfront pricing. All estimates are provided before work begins, and we'll never perform additional services without your approval.
           </p>
-          <p className="text-muted-gray text-base md:text-lg leading-relaxed font-body">
+          <p className="text-muted-gray text-base leading-relaxed font-body">
             For complex repairs or custom work, we'll provide a detailed estimate after inspection. No hidden fees, no surprises—just fair pricing for quality service.
           </p>
         </div>
